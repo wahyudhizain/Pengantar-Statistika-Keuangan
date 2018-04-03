@@ -1,0 +1,11 @@
+pilihanakhir <- function(num, k, i, n, v=1/(1+i))
+  switch(num,
+         satu = {
+           anakhir = k*((1-v^n)/i)
+           print(anakhir)
+         },
+         dua = {
+           snakhir = k*((((1+i)^n)-1)/i)
+           print(snakhir)
+         }
+  )
