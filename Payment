@@ -1,0 +1,25 @@
+pilihanann <- function(num,nilai, i, t, m=TRUE)
+{
+  j=i/m
+  n=t*m
+  v=(1/(1+j))
+  switch(num,
+         satu = {
+           PVannakhir = nilai/((1-v^n)/j)
+           print(PVannakhir)
+           cat("Nilai akumulitasi annuitas akhir=",PVannakhir,"\n")
+         },
+         dua = {
+           NAannakhir = nilai/(((1+j)^n-1)/j)
+           print(NAannakhir)
+         },
+         tiga = {
+           PVannawal = nilai/((1-v^n)/(j*v))
+           print(PVannawal)
+         },
+         empat = {
+           NAannawal = nilai/(((1+j)^n-1)/(j*v))
+           print(NAannawal)
+         }
+  )
+}
