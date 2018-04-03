@@ -1,0 +1,16 @@
+pilihanawal <- function(num, k, i, t, m=TRUE)
+{
+    j=i/m
+    v=1/(1+j)
+    n=t*m
+  switch(num,
+         satu = {
+           anawal = k*(1-v^n)/(j*v)
+           print(anawal)
+         },
+         dua = {
+           snawal = k*((1+j)^n-1)/(j*v)
+           print(snawal)
+         }
+           )
+  }
